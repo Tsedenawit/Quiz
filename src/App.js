@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import definite from './Default';
+import Definite from './Definite';
 function App() {
   return (
-    <definite/>
+    <Definite />
   );
 }
 
