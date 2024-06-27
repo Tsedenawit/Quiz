@@ -13,6 +13,8 @@ export default function Definite(){
 "Thanks to the tombs built by the ancient kingdom of Kush, which country is home to—by far—the most pyramids in the world?-sudan",
 " What country has the longest coastline? - canada"];
     // const [data,setdata]=useState();
+    const [quest, setQuest]=useState(questions[0]);
+    console.log(quest);
 useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
   .then(response => response.json())
   .then(data => {
