@@ -15,6 +15,10 @@ export default function Definite(){
     // const [data,setdata]=useState();
     const [quest, setQuest]=useState(questions[0]);
     console.log(quest);
+  //   const app = () => {
+    
+  // }
+  // console.log(app())
 useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
   .then(response => response.json())
   .then(data => {
@@ -34,11 +38,8 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
         ))}
         </div>
         <div>
-          {questions.map(dat =>(
-            <div key={dat} id="que">
-              <h3>{questions[0]}</h3>
-            </div>
-          ))}
+       
+          
         </div>
       </div>
     )
