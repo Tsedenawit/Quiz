@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from "react";
-
+import { motion } from "framer-motion";
 export default function Definite(){
     const numbers = [1, 2, 3, 4, 5,6,7,8,9,10];
     const questions =["In which country are the world’s 10 coldest cities located? - russia",
@@ -38,7 +38,6 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
         ))}
         </div>
         <div>
-       
           
         </div>
       </div>
