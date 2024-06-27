@@ -11,12 +11,13 @@ export default function Definite(){
 "Home to languages like Tok Pisin, Hiri Motu, and a German creole known as Unserdeutsch, which is the most linguistically diverse country in the world? - Papua New Guinea",
 "Which of these is NOT one of the 13 countries crossed by the Equator? - egypt",
 "Thanks to the tombs built by the ancient kingdom of Kush, which country is home to—by far—the most pyramids in the world?-sudan",
-" What country has the longest coastline? - canada"]
-    const [data,setdata]=useState();
+" What country has the longest coastline? - canada"];
+    // const [data,setdata]=useState();
 useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
   .then(response => response.json())
   .then(data => {
     console.log(data)
+
   })
   .catch(error => {
     console.log(error)
@@ -29,6 +30,13 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
             <h3 className="text-center mt-3">{ind}</h3>
           </div>
         ))}
+        </div>
+        <div>
+          {questions.map(dat =>(
+            <div key={dat} id="que">
+              <h3>{questions[0]}</h3>
+            </div>
+          ))}
         </div>
       </div>
     )
