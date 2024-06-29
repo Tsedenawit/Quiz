@@ -8,13 +8,13 @@ export default function Definite(){
       {ID:2, que:"Supposedly home to a “monster,” Loch Ness is one of many inland seas—or “lochs”—in which country?- scotland"},
     {ID:3, que:"Which country has three capital cities—Pretoria, Cape Town, and Bloemfontein? - southafrica"},
   {ID:4, que:"Thanks to its overseas territories, which country technically spans 12 time zones? -france"},
-"With an area of less than 0.2 square mile (0.5 square kilometer), which is the smallest country in the world? - vatican city",
-"Which continent is home to the most countries? -africa",
+{ID:5, que:"With an area of less than 0.2 square mile (0.5 square kilometer), which is the smallest country in the world? - vatican city"},
+{ID:6, que:"Which continent is home to the most countries? -africa"},
 "Home to languages like Tok Pisin, Hiri Motu, and a German creole known as Unserdeutsch, which is the most linguistically diverse country in the world? - Papua New Guinea",
 "Which of these is NOT one of the 13 countries crossed by the Equator? - egypt",
 "Thanks to the tombs built by the ancient kingdom of Kush, which country is home to—by far—the most pyramids in the world?-sudan",
 " What country has the longest coastline? - canada"];
-    // const [data,setdata]=useState();
+    const [data,setdata]=useState();
     const [quest, setQuest]=useState(questions[0]);
     console.log(quest);
     const [answer, setAnswer]=useState();
