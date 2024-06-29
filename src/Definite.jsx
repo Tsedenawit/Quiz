@@ -1,7 +1,12 @@
 import React, { useEffect, useState} from "react";
 import { motion } from "framer-motion";
 export default function Definite(){
-    const numbers = [1, 2, 3, 4, 5,6,7,8,9,10];
+    const numbers = [{id:1, num:1},
+      {id:2, num:2} ,{id:3, num:3}, {id:4, num:4},{id:5, num:5},
+      {id:6, num:6},{id:7, num:7},{id:8, num:8},{id:9, num:9},{id:10, num:10}];
+   
+   
+   
     const questions =["In which country are the world’s 10 coldest cities located? - russia",
       "Supposedly home to a “monster,” Loch Ness is one of many inland seas—or “lochs”—in which country?- scotland",
     "Which country has three capital cities—Pretoria, Cape Town, and Bloemfontein? - southafrica",
@@ -15,6 +20,8 @@ export default function Definite(){
     // const [data,setdata]=useState();
     const [quest, setQuest]=useState(questions[0]);
     console.log(quest);
+    const [answer, setAnswer]=useState();
+
   //   const app = () => {
     
   // }
@@ -22,8 +29,8 @@ export default function Definite(){
 useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
   .then(response => response.json())
   .then(data => {
-    console.log(data)
-
+    setAnswer(data);
+    console.log(answer);
   })
   .catch(error => {
     console.log(error)
@@ -31,9 +38,9 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
     return (
       <div id="cont">
         <div  className="flex ml-20 mr-20 mt-10">
-        {numbers.map(ind => (
-          <div key={ind} id="num">
-            <h3 className="text-center mt-3">{ind}</h3>
+        {numbers.map((ind) => (
+          <div key={ind.id} className="num">
+            <h3 className="text-center mt-3">{ind.num}</h3>
           </div>
         ))}
         </div>
