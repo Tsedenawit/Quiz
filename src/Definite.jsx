@@ -19,7 +19,7 @@ export default function Definite(){
     const [quest, setQuest]=useState(questions[0]);
     console.log(quest);
     const [answer, setAnswer]=useState();
-
+      console.log(questions)
   //   const app = () => {
     
   // }
@@ -43,11 +43,9 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
         ))}
         </div>
        
-          {questions.map((dat)=>(
-            // console.log(dat.que)
-            // console.log("dat.id",dat.IDE);
-            <div key={dat.IDE} className="w-250 ">
-            <h1 className="text-red-300" >{dat.que}</h1>
+        {questions.slice(1).map((dat) => (
+    <div key={dat.IDE} className="w-250">
+      <h1 className="text-red-300">{dat.que}</h1>
             </div>
           ))}
       </div>
