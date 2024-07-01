@@ -43,11 +43,11 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
         ))}
         </div>
        
-        {questions.slice(1).map((dat) => (
-    <div key={dat.IDE} className="w-250">
-      <h1 className="text-red-300">{dat.que}</h1>
+        {questions.length > 0 && (
+    <div key={questions[0].IDE} className="w-250">
+      <h1 className="text-red-300">{questions[0].que}</h1>
             </div>
-          ))}
+          )}
       </div>
     )
 }
