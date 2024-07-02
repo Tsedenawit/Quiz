@@ -21,7 +21,9 @@ export default function Definite(){
       {Isentify:2, ans:"Scotland"},
       {Isentify:3, ans:"South africa"},
       {Isentify:4, ans:"France"},
-      {Isentify:2, ans:"Scotland"}
+      {Isentify:5, ans:"Vatican city"},
+      {Isentify:6, ans:"Scotland"},
+      {Isentify:7, ans:"Scotland"},
 
 
 
@@ -36,13 +38,11 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
   .then(data => {
     setAnswer(data);
     console.log(data);
-    console.log(data[95].altSpellings);
-    console.log(data[95].altSpellings[1]);
   })
   .catch(error => {
     console.log(error)
   })},[])   
-  console.log(answer)
+
     return (
       <div id="cont">
         <div  className="flex ml-20 mr-20 mt-10">
@@ -60,9 +60,10 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
           )}
           <div>
   {answer.map((ans) => (
-    <div key={ans.IDE} className="bg-current w-200 h-100">
-      {/* Assuming ans is an object and altSpellings is an array */}
-     <h3 className="text-white">{ans.altSpellings[1]}</h3>
+    <div key={ans.tld} className="bg-current w-200 h-100">
+    {console.log(ans.altSpellings[1])}
+     <h3 className="text-white">{ans.name.altSpellings}</h3>
+
     </div>
   ))}
 </div>
