@@ -19,7 +19,9 @@ export default function Definite(){
     const answers =[
       {Isentify:1, ans:"Russia"},
       {Isentify:2, ans:"Scotland"},
-      {Isentify:3, ans:"Scotland"}
+      {Isentify:3, ans:"South africa"},
+      {Isentify:4, ans:"France"},
+      {Isentify:2, ans:"Scotland"}
 
 
 
