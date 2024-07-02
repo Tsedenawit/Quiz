@@ -38,6 +38,7 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
   .then(data => {
     setAnswer(data);
     console.log(data);
+    console.log("whe")
   })
   .catch(error => {
     console.log(error)
