@@ -16,6 +16,14 @@ export default function Definite(){
       {IDE:9, que:"Thanks to the tombs built by the ancient kingdom of Kush, which country is home to—by far—the most pyramidEs in the world?-sudan"},
       {IDE:10, que:" What country has the longest coastline? - canada"}];
     // const [data,setdata]=useState();
+    const answers =[
+      {Isentify:1, ans:"Russia"},
+      {Isentify:2, ans:"Scotland"},
+      {Isentify:3, ans:"Scotland"}
+
+
+
+    ]
     const [answer, setAnswer]=useState([]);
   //   const app = () => {
     
@@ -32,6 +40,7 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
   .catch(error => {
     console.log(error)
   })},[])   
+  console.log(answer)
     return (
       <div id="cont">
         <div  className="flex ml-20 mr-20 mt-10">
@@ -48,10 +57,10 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
             </div>
           )}
           <div>
-  {answer.map((ans, index) => (
-    <div key={index} className="bg-current w-200 h-100">
+  {answer.map((ans) => (
+    <div key={ans.IDE} className="bg-current w-200 h-100">
       {/* Assuming ans is an object and altSpellings is an array */}
-     <h3 className="text-white">{ans[95].altSpellings[1]}</h3>
+     <h3 className="text-white">{ans.altSpellings[1]}</h3>
     </div>
   ))}
 </div>
