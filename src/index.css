@@ -27,3 +27,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#Box{
+  background-color:#393F6E ;
+  width: 800px;
+  height: 450px;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
