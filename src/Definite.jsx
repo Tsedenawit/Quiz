@@ -16,18 +16,6 @@ export default function Definite(){
       {IDE:9, que:"Thanks to the tombs built by the ancient kingdom of Kush, which country is home to—by far—the most pyramidEs in the world?-sudan"},
       {IDE:10, que:" What country has the longest coastline? - canada"}];
     // const [data,setdata]=useState();
-    const answers =[
-      {Isentify:1, ans:"Russia"},
-      {Isentify:2, ans:"Scotland"},
-      {Isentify:3, ans:"South africa"},
-      {Isentify:4, ans:"France"},
-      {Isentify:5, ans:"Vatican city"},
-      {Isentify:6, ans:"Scotland"},
-      {Isentify:7, ans:"Scotland"},
-
-
-
-    ]
     const [answer, setAnswer]=useState([]);
   //   const app = () => {
     
@@ -60,14 +48,27 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
             </div>
           )}
           <div>
+            
+          </div>
+          <div>
+  {answer.length > 0 && (
+    <div key={answer.tld} className="bg-current w-200 h-100">
+      <h3 className="text-white">{answer[5].name.common}</h3>
+      <h3 className="text-white">{answer[10].name.common}</h3>
+      <h3 className="text-white">{answer[30].name.common}</h3>
+      <h3 className="text-white">{answer[95].name.common}</h3>
+    </div>
+  )}
+</div>
+          {/* <div>
   {answer.map((ans) => (
     <div key={ans.tld} className="bg-current w-200 h-100">
-    {console.log(ans.altSpellings[1])}
-     <h3 className="text-white">{ans.name.altSpellings}</h3>
+     <h3 className="text-white">{ans.name.common}</h3>
 
     </div>
+    
   ))}
-</div>
+</div> */}
           
       </div>
     )
