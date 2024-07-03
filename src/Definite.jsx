@@ -53,7 +53,7 @@ useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
           <div>
   {answer.length > 0 && (
     <div key={answer.tld} className="bg-current w-200 justify-center">
-      <div className="flex justify-between w-[200px] h-[100px] bg-blue-200">
+      <div className="flex justify-between w-[200px] h-[100px] bg-blue-200 t-[50%]" >
       <h3 className="text-white">{answer[5].name.common}</h3>
       <h3 className="text-white">{answer[10].name.common}</h3>
       </div>
